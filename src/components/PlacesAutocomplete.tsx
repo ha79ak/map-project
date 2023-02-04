@@ -7,13 +7,13 @@ const PlacesAutocomplete = ({
     onAddressSelect? : (address: string) => void;
 }) => {
     const {
-        ready,
+        // ready,
         value,
         suggestions: { status, data },
         setValue,
         clearSuggestions,
       } = usePlacesAutocomplete ({
-        requestOptions: { componentRestrictions: { country: null } }, // country can be restricted by 'tr' or 'us' instead null
+        requestOptions: { componentRestrictions: { country: null } }, // country can be restricted using 'tr' or 'us' instead null
         debounce: 300,
         cache: 86400,
       });
@@ -44,13 +44,18 @@ const PlacesAutocomplete = ({
       return (
         <div>
             <input
-              value={value}
-              disabled={!ready}
-              onChange={(e) => setValue(e.target.value)}
-              placeholder='Cankaya Ankara'
+                // disabled={!ready}
+                value={value}
+                onChange={(e) => setValue(e.target.value)}
+                onFocus={() => setValue('')}
+                placeholder='Search in Map'
             />
             {status === 'OK' && (
-              <ul>{renderSuggestions()}</ul>
+              <ul style={{
+                paddingTop: '20px',
+                fontFamily: 'monospace',
+                textTransform: 'capitalize'
+              }}>{renderSuggestions()}</ul>
             )}
         </div>
       )
