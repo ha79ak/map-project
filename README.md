@@ -1,7 +1,13 @@
-# simple map project using Google maps, places and geocoding APIs
+## simple map project using Google maps, places and geocoding APIs
 
-# live demo: https://map-project-nu.vercel.app/
+## live demo: https://map-project-nu.vercel.app/
 (the api keys will be expired around end of April 2023)
+
+----
+<img width="1440" alt="Screen Shot 2023-04-02 at 00 01 52" src="https://user-images.githubusercontent.com/67202257/229313905-49c1a32b-47e2-47c8-b8bb-914852298220.png">
+
+----
+<img width="415" alt="Screen Shot 2023-04-02 at 00 02 18" src="https://user-images.githubusercontent.com/67202257/229313909-a5dfa01d-cd76-4f2c-b8cf-98b167d7ec21.png">
 
 
 #
